@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: #9a5b71;
+    --color-2: #bc913b;
+    --color-3: #bf0e78;
+    --color-4: #faf3f4;
+    --color-5: #ffffff;
+    --font-1: 'Fraunces', serif;
+    --font-2: 'Playfair Display', serif;
+    --font-3: 'Open Sans', sans-serif;
+    --weight-font-regular: 400;
+    --weight-font-bold: 700;
+}
+
+.invite-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
