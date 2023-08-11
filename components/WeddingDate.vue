@@ -1,6 +1,6 @@
 <template>
   <div class="date-container">
-    <span class="date">15 de Noviembre del 2023</span>
+    <span class="date">15.11.2023</span>
   </div>
 </template>
 
@@ -17,9 +17,9 @@
     display: table;
     white-space: nowrap;
     width: 100%;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
   }
@@ -27,7 +27,7 @@
   .date::after, .date::before {
     border-top: 1px solid var(--color-2);
     content: '';
-    width: 10%;
+    width: 15%;
     height: 1px;
   }
 
