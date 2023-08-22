@@ -1,17 +1,20 @@
 <template>
-  <section class="invite-section bg-pink-img">
-    <div class="flowers-container">
-      <img src="/assets/flower-left.webp" alt="left-flower">
-      <img src="/assets/flower-middle.webp" alt="middle-flower">
-      <img src="/assets/flower-right.webp" alt="right-flower">
-    </div>
-    <WeddingDate />
-    <MainTitle />
-    <Phrase />
-    <client-only>
-      <Vue3Lottie animationLink="/assets/scroll-down.json" :height="200" :width="200" />
-    </client-only>
-  </section>
+  <div class="bg-pink-img">
+    <section class="invite-section">
+      <div class="flowers-container">
+        <img src="/assets/flower-left.webp" alt="left-flower">
+        <img src="/assets/flower-middle.webp" alt="middle-flower">
+        <img src="/assets/flower-right.webp" alt="right-flower">
+      </div>
+      <WeddingDate />
+      <MainTitle />
+      <Phrase />
+      <client-only>
+        <Vue3Lottie animationLink="/assets/scroll-down.json" :height="200" :width="200" />
+      </client-only>
+    </section>
+    <CounterSection />
+  </div>
 </template>
 
 <script setup>
@@ -21,10 +24,17 @@
 <style scoped>
 .bg-pink-img {
   background: url("/assets/fondo-top.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.invite-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .flowers-container {

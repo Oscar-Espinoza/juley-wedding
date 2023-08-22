@@ -21,6 +21,7 @@
   font-size: 20px;
   line-height: 35px;
   margin-bottom: 0;
+  padding: 0 5px;
 }
 
 .quote {
