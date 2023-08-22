@@ -1,8 +1,8 @@
 <template>
   <div class="quote-container">
-    <img src="@/assets/comilla.svg" alt="quotes" class="quote open" />
+    <img src="/assets/comilla.svg" alt="quotes" class="quote open" />
     <p>Todos somos mortales, <br> hasta el primer beso y la segunda copa de vino </p>
-    <img src="@/assets/comilla.svg" alt="quotes" class="quote close" />
+    <img src="/assets/comilla.svg" alt="quotes" class="quote close" />
   </div>
 </template>
 
