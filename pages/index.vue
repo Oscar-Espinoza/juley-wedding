@@ -2,5 +2,6 @@
   <div>
     <TopSection />
     <InfoSection />
+    <Carousel />
   </div>
 </template>

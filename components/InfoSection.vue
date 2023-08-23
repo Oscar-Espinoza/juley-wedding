@@ -8,10 +8,13 @@
       <img src="/assets/cinta-end.svg" alt="cinta-end" class="cinta end">
     </div>
     <div>
-      <Info />
-      <Info />
-      <Info />
+      <Info title="Día" text="Sábado 15 se Mayo - 17hs" button-text="Agendar" :handle-button="() => { }" />
+
+      <Info title="Lugar" text="Salon de fiestas Avril" button-text="Agendar" :handle-button="() => { }" />
+
+      <Info title="Dirección" text="Av. Los Reartes 12 - BsAs" button-text="Agendar" :handle-button="() => { }" />
     </div>
+    <img src="/assets/curves.svg" alt="curves-foot" class="curves">
   </section>
 </template>
 
@@ -21,7 +24,8 @@
 
 <style scoped>
 section {
-  padding: 50px 0;
+  padding: 50px 0 120px 0;
+  position: relative;
 }
 
 .title-container {
@@ -52,5 +56,12 @@ section {
 
 .end {
   right: -4%;
+}
+
+.curves {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: rotateY(180deg)
 }
 </style>

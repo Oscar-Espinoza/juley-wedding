@@ -1,13 +1,20 @@
 <template>
   <div class="info">
-    <h3 class="title">Día</h3>
-    <p class="text">Sábado 15 se Mayo - 17hs</p>
-    <button type="button" class="button">Agendar</button>
+    <h3 class="title">{{ title }}</h3>
+    <p class="text">{{ text }}</p>
+    <button type="button" class="button" @click="handleButton">{{ buttonText }}</button>
   </div>
 </template>
 
 <script setup>
+import { ref, defineProps } from 'vue'
 
+const { title, text, buttonText, handleButton } = defineProps({
+  title: { type: String },
+  text: { type: String },
+  buttonText: { type: String },
+  handleButton: { type: Function, default: () => { } }
+})
 </script>
 
 <style scoped>
@@ -39,8 +46,8 @@
   background: var(--color-3);
   color: var(--color-4);
   border-radius: 50px;
-  font-size: 15px;
-  padding: 15px 0;
+  font-size: 18px;
+  padding: 12px 0;
   border: none;
   width: 100%;
 }
