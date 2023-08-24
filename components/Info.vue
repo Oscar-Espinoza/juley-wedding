@@ -39,16 +39,4 @@ const { title, text, buttonText, handleButton } = defineProps({
   font-size: 1.5rem;
   padding: 0 30px;
 }
-
-.button {
-  font-family: var(--fuente-3);
-  font-weight: var(--weight-font-regular);
-  background: var(--color-3);
-  color: var(--color-4);
-  border-radius: 50px;
-  font-size: 18px;
-  padding: 12px 0;
-  border: none;
-  width: 100%;
-}
 </style>

@@ -3,5 +3,6 @@
     <TopSection />
     <InfoSection />
     <Carousel />
+    <DetailsSection />
   </div>
 </template>

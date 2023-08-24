@@ -9,7 +9,7 @@
         <TimeItem :number="seconds" label="seg" />
       </ol>
       <client-only>
-        <Vue3Lottie animationLink="/assets/heart.json" :speed="0.5" />
+        <Vue3Lottie animationLink="/assets/heart.json" />
       </client-only>
     </div>
     <img src="/assets/curves.svg" alt="curves-img" class="curves">
