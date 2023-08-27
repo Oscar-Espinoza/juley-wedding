@@ -4,10 +4,12 @@
     <p class="text">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
     <div class="details">
       <Detail title="Código de vestimenta" lottie="dress" text="Información adicional
-para tener en cuenta" buttonText="Info +" :handleButton="() => { }" />
+para tener en cuenta" buttonText="Info +" />
+
       <Detail title="Tips y Notas" lottie="tips" text="Una orientación para
-tu vestuario" buttonText="Ver más" :handleButton="() => { }" />
+tu vestuario" buttonText="Ver más" />
     </div>
+    <img src="/assets/curves.svg" alt="curves-svg" class="curves">
   </section>
 </template>
 
@@ -16,7 +18,7 @@ tu vestuario" buttonText="Ver más" :handleButton="() => { }" />
 
 <style scoped>
 section {
-  padding: 50px 40px;
+  padding: 50px 40px 100px 40px;
   text-align: center;
   gap: 15px;
 }
@@ -47,5 +49,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.curves {
+  position: absolute;
+  bottom: 0;
 }
 </style>

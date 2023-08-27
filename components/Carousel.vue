@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3 class="title">Retrasos de Nuestro Amor</h3>
+    <h3 class="title">Retratos de Nuestro Amor</h3>
     <p class="text">Un minuto, un segundo, un unstante que queda en la eternidad</p>
     <Swiper :modules="[EffectCube, Pagination]" effect="cube" :grabCursor="true" :loop="true" :cubeEffect="{
       shadow: true,
@@ -53,7 +53,6 @@ import 'swiper/css'
 
 .text {
   font-family: var(--fuente-2);
-  font-weight: var(--weight-font-regular);
   color: var(--color-1);
   width: 100%;
   display: inline-block;

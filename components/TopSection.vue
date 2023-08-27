@@ -14,6 +14,7 @@
       </client-only>
     </section>
     <CounterSection />
+    <img src="/assets/curves.svg" alt="curves-img" class="curves">
   </div>
 </template>
 
@@ -26,6 +27,7 @@
   background: url("/assets/fondo-top.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .invite-section {
@@ -59,5 +61,12 @@
 
 .flowers-container img:nth-last-child(1) {
   right: 0;
+}
+
+.curves {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
 }
 </style>

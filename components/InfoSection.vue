@@ -8,11 +8,22 @@
       <img src="/assets/cinta-end.svg" alt="cinta-end" class="cinta end">
     </div>
     <div>
-      <Info title="Día" text="Sábado 15 se Mayo - 17hs" button-text="Agendar" :handle-button="() => { }" />
+      <Info title="Día" :text="`Sábado 04 de Noviembre <br /> Ceremonia: 16:30hs <br /> Recepción: 18hs`">
+        <a title="Add to Calendar" class="addeventatc" data-id="Rs18475642"
+          href="https://www.addevent.com/event/Rs18475642" target="_blank">Agendar</a>
+      </Info>
 
-      <Info title="Lugar" text="Salon de fiestas Avril" button-text="Agendar" :handle-button="() => { }" />
+      <Info title="Lugar" text="Salon de fiestas Avril">
+        <OpenModalButton btnText="Confirmar Asistencia">
+          <ConfirmForm />
+        </OpenModalButton>
+      </Info>
 
-      <Info title="Dirección" text="Av. Los Reartes 12 - BsAs" button-text="Agendar" :handle-button="() => { }" />
+      <Info title="Dirección" text="Av. Los Reartes 12 - BsAs">
+        <OpenModalButton btnText="¿Cómo llegar?">
+          <Map />
+        </OpenModalButton>
+      </Info>
     </div>
     <img src="/assets/curves.svg" alt="curves-foot" class="curves">
   </section>
@@ -63,5 +74,20 @@ section {
   width: 100%;
   bottom: 0;
   transform: rotateY(180deg)
+}
+
+.addeventatc {
+  font-family: var(--fuente-3);
+  font-weight: var(--weight-font-regular);
+  background: var(--color-3);
+  border-radius: 50px;
+  font-size: 18px;
+  padding: 12px 0;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff !important;
+  z-index: 1;
 }
 </style>

@@ -1,20 +1,28 @@
 <template>
   <div class="info">
     <h3 class="title">{{ title }}</h3>
-    <p class="text">{{ text }}</p>
-    <button type="button" class="button" @click="handleButton">{{ buttonText }}</button>
+    <p class="text" v-html="text"></p>
+    <slot></slot>
   </div>
 </template>
 
 <script setup>
 import { ref, defineProps } from 'vue'
 
-const { title, text, buttonText, handleButton } = defineProps({
+const { title, text, buttonText } = defineProps({
   title: { type: String },
   text: { type: String },
   buttonText: { type: String },
   handleButton: { type: Function, default: () => { } }
 })
+const isModalOpen = ref(false)
+const openModal = () => {
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+}
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@
         <Vue3Lottie :animationLink="`/assets/${lottie}.json`" />
       </div>
     </client-only>
-    <p class="text">{{ text }}</p>
+    <p class="text" v-html="text"></p>
     <button type="button" class="button" @click="handleButton">{{ buttonText }}</button>
   </div>
 </template>

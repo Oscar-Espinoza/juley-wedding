@@ -12,7 +12,6 @@
         <Vue3Lottie animationLink="/assets/heart.json" />
       </client-only>
     </div>
-    <img src="/assets/curves.svg" alt="curves-img" class="curves">
   </section>
 </template>
 
@@ -20,7 +19,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import TimeItem from './TimeItem.vue';
 
-let targetDate = new Date('2023-12-31');
+let targetDate = new Date('2023-11-04');
 let days = ref(0);
 let hours = ref(0);
 let minutes = ref(0);
@@ -57,13 +56,6 @@ onUnmounted(() => {
   background: #fbf6f845;
   padding: 20px 0;
   position: relative;
-}
-
-.curves {
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
 }
 
 .frame {
