@@ -1,6 +1,6 @@
 <template>
   <div class="date-container">
-    <span class="date">15.11.2023</span>
+    <span class="date">04.11.2023</span>
   </div>
 </template>
 
