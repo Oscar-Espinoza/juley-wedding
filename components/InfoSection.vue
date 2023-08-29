@@ -8,7 +8,7 @@
       <img src="/assets/cinta-end.svg" alt="cinta-end" class="cinta end">
     </div>
     <div>
-      <Info title="Día" :text="`Sábado 04 de Noviembre <br /> Ceremonia: 16:30hs <br /> Recepción: 18hs`">
+      <Info title="Día" :text="`Sábado 04 de Noviembre <br /> Ceremonia: 17:00hs <br /> Recepción: 18hs`">
         <a title="Add to Calendar" class="addeventatc" data-id="Rs18475642"
           href="https://www.addevent.com/event/Rs18475642" target="_blank">Agendar</a>
       </Info>

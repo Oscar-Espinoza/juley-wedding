@@ -7,7 +7,7 @@
       </div>
     </client-only>
     <p class="text" v-html="text"></p>
-    <button type="button" class="button" @click="handleButton">{{ buttonText }}</button>
+    <slot></slot>
   </div>
 </template>
 
@@ -18,8 +18,6 @@ const { title, lottie, text, buttonText, handleButton } = defineProps({
   title: { type: String },
   lottie: { type: String },
   text: { type: String },
-  buttonText: { type: String },
-  handleButton: { type: Function }
 })
 </script>
 

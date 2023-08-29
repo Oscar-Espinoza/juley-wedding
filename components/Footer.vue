@@ -1,7 +1,7 @@
 <template>
   <footer>
     <h2 class="main-title">
-      Juley <span class="apostrophe">&</span> Ale
+      Caro <span class="apostrophe">&</span> Alexa
     </h2>
     <p @click="openModal" class="confirm">Confirmar Asistencia</p>
   </footer>
