@@ -65,7 +65,7 @@ import 'swiper/css'
 .swiper {
   max-width: 400px;
   width: calc(100% - 50px);
-  height: 300px;
+  height: 350px;
   overflow: visible;
 
 }
