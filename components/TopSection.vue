@@ -43,7 +43,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 260px;
+  width: 300px;
   height: 108px;
 }
 

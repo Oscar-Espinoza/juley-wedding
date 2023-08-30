@@ -20,11 +20,14 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCube, Pagination } from 'swiper/modules';
 
 const photos = [
-  '/assets/flower-left.webp',
-  '/assets/flower-left.webp',
-  '/assets/flower-left.webp',
-  '/assets/flower-left.webp',
-  '/assets/flower-left.webp',
+  '/assets/photos/photo_1.webp',
+  '/assets/photos/photo_2.webp',
+  '/assets/photos/photo_3.webp',
+  '/assets/photos/photo_4.webp',
+  '/assets/photos/photo_5.webp',
+  '/assets/photos/photo_6.webp',
+  '/assets/photos/photo_7.webp',
+  '/assets/photos/photo_8.webp',
 ]
 
 import 'swiper/css/effect-cube';
@@ -60,13 +63,15 @@ import 'swiper/css'
 }
 
 .swiper {
-  width: 300px;
+  width: 400px;
   height: 300px;
   overflow: visible;
+
 }
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
+  border-radius: 40px;
 }
 </style>

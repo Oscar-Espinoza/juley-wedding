@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit="handleSubmit">
     <h2 class="title">¿Asistes a la ceremonia?</h2>
     <div class="radio-wrap">
       <input type="radio" id="assist-true" name="assist" :value="true" v-model="radioValue"
@@ -27,6 +27,12 @@ const name = ref('')
 
 const handleRadioChange = (radio) => {
   willAssist.value = radio
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  console.log("Asistirá?", willAssist.value)
+  console.log("Quién?", name.value)
 }
 </script>
 
