@@ -37,6 +37,7 @@
 section {
   padding: 50px 0 120px 0;
   position: relative;
+  gap: 30px;
 }
 
 .title-container {

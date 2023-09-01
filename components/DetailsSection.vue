@@ -36,7 +36,7 @@ section {
 .title {
   font-family: var(--fuente-1);
   font-weight: var(--weight-font-bold);
-  color: var(--color-1);
+  color: var(--color-3);
   width: 100%;
   display: inline-block;
   font-size: 35px;

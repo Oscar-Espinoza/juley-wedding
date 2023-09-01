@@ -17,7 +17,7 @@
   text-align: center;
   color: var(--color-1);
   font-family: var(--font-2);
-  font-weight: var(--weight-font-regular);
+  font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 0;

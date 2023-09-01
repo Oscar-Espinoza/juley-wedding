@@ -1,7 +1,7 @@
 <template>
   <footer>
     <h2 class="main-title">
-      Caro <span class="apostrophe">&</span> Alexa
+      Caro & Alexa
     </h2>
     <p @click="openModal" class="confirm">Confirmar Asistencia</p>
   </footer>
@@ -35,7 +35,7 @@ footer {
 
 .main-title {
   font-family: var(--font-1);
-  color: var(--color-1);
+  color: var(--color-3);
   display: flex;
   gap: 5px;
   justify-content: center;
@@ -43,22 +43,17 @@ footer {
 }
 
 .apostrophe {
-  background: var(--color-2);
-  border-radius: 100%;
-  padding: 5px;
-  width: 40px;
-  height: 40px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--color-3);
   font-size: 30px;
-  align-self: flex-end;
 }
 
 .confirm {
-  color: var(--color-3);
+  color: var(--color-1);
   font-size: 22px;
   cursor: pointer;
+}
+
+.confirm:hover {
+  color: var(--color-3);
 }
 </style>

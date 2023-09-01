@@ -47,17 +47,17 @@ import "swiper/css/thumbs"
 
 <style scoped>
 .container {
-  padding: 50px 0;
+  padding-top: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 15px;
 }
 
 .title {
   font-family: var(--fuente-1);
   font-weight: var(--weight-font-bold);
-  color: var(--color-1);
+  color: var(--color-3);
   width: 100%;
   display: inline-block;
   font-size: 40px;
@@ -66,6 +66,7 @@ import "swiper/css/thumbs"
 
 .text {
   font-family: var(--fuente-2);
+  font-weight: 900;
   color: var(--color-1);
   width: 100%;
   display: inline-block;
@@ -73,15 +74,27 @@ import "swiper/css/thumbs"
 }
 
 .swiper {
-  max-width: 500px;
-  width: calc(100% - 40px);
+  width: 100%;
+  margin: 0;
+  outline: 1px rgb(230, 230, 230) solid;
+  padding: 10px 10px;
+}
+
+.swiper-wrapper {
+  padding: 0 20px;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
+  max-width: 600px;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper-slide-visible {
+  padding: 0;
 }
 
 .mySwiper .swiper-slide {

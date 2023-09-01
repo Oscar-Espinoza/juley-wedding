@@ -34,7 +34,7 @@ const { title, lottie, text, buttonText, handleButton } = defineProps({
 .title {
   font-family: var(--fuente-3);
   font-weight: var(--weight-font-bold);
-  color: var(--color-1);
+  color: var(--color-3);
   font-size: 1.75rem;
 }
 

@@ -38,7 +38,7 @@ const closeModal = () => {
 
 .title {
   font-size: 2rem;
-  color: var(--color-1);
+  color: var(--color-3);
 }
 
 .text {

@@ -13,7 +13,7 @@
 
 .date {
   font-family: var(--fuente-2);
-  font-weight: var(--weight-font-regular);
+  font-weight: 900;
   color: var(--color-1);
   display: table;
   white-space: nowrap;
