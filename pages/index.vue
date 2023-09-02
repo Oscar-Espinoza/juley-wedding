@@ -9,7 +9,7 @@
   <div id="modal"></div>
   <div class="music" @click="handlePlay">
     <img :src="`/assets/volume-${muted ? 'off' : 'on'}.svg`" alt="music-on">
-    <audio src="/assets/para-siempre-kg.mp3" autoplay :muted="muted"></audio>
+    <audio src="/assets/para-siempre-kg.mp3" autoplay loop :muted="muted"></audio>
   </div>
 </template>
 
