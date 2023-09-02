@@ -3,21 +3,21 @@
     <h3 class="title">Retratos de Nuestro Amor</h3>
     <p class="text">Un minuto, un segundo, un unstante que queda en la eternidad</p>
 
-    <div class="carousel-container">
-      <Swiper :loop="true" :spaceBetween="10" :thumbs="{ swiper: thumbsSwiper }" :modules="[FreeMode, Navigation, Thumbs]"
-        class="mySwiper2">
-        <SwiperSlide v-for="photo in photos">
-          <img :src="photo" alt="carousel-img">
-        </SwiperSlide>
-      </Swiper>
 
-      <Swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true" :watchSlidesProgress="true"
-        :modules="[FreeMode, Navigation, Thumbs]" class="mySwiper">
-        <SwiperSlide v-for="photo in photos">
-          <img :src="photo" alt="carousel-img">
-        </SwiperSlide>
-      </Swiper>
-    </div>
+    <Swiper :loop="true" :spaceBetween="10" :thumbs="{ swiper: thumbsSwiper }" :modules="[FreeMode, Navigation, Thumbs]"
+      class="mySwiper2">
+      <SwiperSlide v-for="photo in photos">
+        <img :src="photo" alt="carousel-img">
+      </SwiperSlide>
+    </Swiper>
+
+    <Swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true" :watchSlidesProgress="true"
+      :modules="[FreeMode, Navigation, Thumbs]" class="mySwiper">
+      <SwiperSlide v-for="photo in photos">
+        <img :src="photo" alt="carousel-img">
+      </SwiperSlide>
+    </Swiper>
+
   </div>
 </template>
 
