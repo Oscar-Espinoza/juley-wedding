@@ -17,7 +17,7 @@
 import { ref } from 'vue'
 
 
-const muted = ref(false)
+const muted = ref(true)
 
 const handlePlay = () => {
   muted.value = !muted.value
