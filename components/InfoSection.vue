@@ -7,7 +7,7 @@
       </h3>
       <img src="/assets/cinta-end.svg" alt="cinta-end" class="cinta end">
     </div>
-    <div>
+    <div class="info-container">
       <Info title="Día" :text="`Sábado 04 de Noviembre <br /> Ceremonia: 17:00hs <br /> Recepción: 18hs`">
         <a title="Add to Calendar" class="addeventatc" data-id="Rs18475642"
           href="https://www.addevent.com/event/Rs18475642" target="_blank">Agendar</a>
@@ -47,6 +47,13 @@ section {
   align-items: center;
 }
 
+.info-container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .title {
   padding: 10px 30px;
   background-color: var(--color-2);
@@ -72,9 +79,9 @@ section {
 
 .curves {
   position: absolute;
-  width: 100%;
-  bottom: 0;
-  transform: rotateY(180deg)
+  width: 100vw;
+  bottom: 0px;
+  transform: rotateY(180deg);
 }
 
 .addeventatc {
@@ -90,5 +97,12 @@ section {
   text-decoration: none;
   color: #fff !important;
   z-index: 1;
+}
+
+
+@media (min-width: 767px) {
+  .curves {
+    bottom: -50px;
+  }
 }
 </style>

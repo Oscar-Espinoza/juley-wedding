@@ -32,8 +32,10 @@ const closeModal = () => {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   gap: 15px;
+  background: var(--color-4);
+  border-radius: 10px;
 }
 
 .title {

@@ -64,9 +64,10 @@
 }
 
 .curves {
-  width: 100%;
+  width: 100vw;
   position: absolute;
   z-index: 0;
   bottom: 0;
+  left: 0;
 }
 </style>

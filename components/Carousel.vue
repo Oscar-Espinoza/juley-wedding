@@ -94,6 +94,7 @@ import "swiper/css/thumbs"
   max-width: 600px;
   object-fit: cover;
   border-radius: 10px;
+  margin: auto;
 }
 
 .mySwiper .swiper-slide {

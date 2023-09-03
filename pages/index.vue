@@ -1,15 +1,16 @@
 <template>
   <div>
+    <Welcome :handlePlay="handlePlay" />
     <TopSection />
     <InfoSection />
     <Carousel />
     <DetailsSection />
-    <Footer />
+    <Footer></Footer>
   </div>
   <div id="modal"></div>
-  <div class="music" @click="handlePlay">
+  <div class="music" @click="handleMute">
     <img :src="`/assets/volume-${muted ? 'off' : 'on'}.svg`" alt="music-on">
-    <audio src="/assets/para-siempre-kg.mp3" autoplay loop :muted="muted"></audio>
+    <audio ref="song" src="/assets/para-siempre-kg.mp3" autoplay loop :muted="muted"></audio>
   </div>
 </template>
 
@@ -18,10 +19,17 @@ import { ref } from 'vue'
 
 
 const muted = ref(true)
+const song = ref(null)
 
-const handlePlay = () => {
+const handleMute = () => {
   muted.value = !muted.value
 }
+
+const handlePlay = () => {
+  song.value.play()
+  muted.value = false
+}
+
 </script>
 
 <style scoped>
@@ -31,7 +39,7 @@ const handlePlay = () => {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 1000;
+  z-index: 10;
   border-radius: 100%;
   display: flex;
   justify-content: center;

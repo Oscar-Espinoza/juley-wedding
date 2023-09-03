@@ -59,6 +59,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 500px;
+  z-index: 10;
 }
 
 .curves {
