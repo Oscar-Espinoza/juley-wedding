@@ -2,7 +2,7 @@
   <section class="container" v-if="showWelcome">
     <div class="message">
       <img src="/assets/welcome-flowers.webp" alt="flowers" class="flowers-img">
-      <p class="text">Estás Cordialmente Invitado/a A Nuestra Boda</p>
+      <p class="text">Estás Cordialmente Invitado/a <br /> A Nuestra Boda</p>
       <h2 class="title">Caro y Alexa</h2>
       <p class="music text">La música de fondo es parte de la experiencia</p>
       <div class="music-btns">
