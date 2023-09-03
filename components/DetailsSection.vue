@@ -66,5 +66,6 @@ section {
 .curves {
   position: absolute;
   bottom: 0;
+  width: 100vw;
 }
 </style>
