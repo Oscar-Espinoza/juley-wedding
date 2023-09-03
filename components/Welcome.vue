@@ -4,10 +4,10 @@
       <img src="/assets/welcome-flowers.webp" alt="flowers" class="flowers-img">
       <p class="text">Estás Cordialmente Invitado/a <br /> A Nuestra Boda</p>
       <h2 class="title">Caro y Alexa</h2>
-      <p class="music text">La música de fondo es parte de la experiencia</p>
+      <p class="music text">¿Estás listo para vivir esta Experiencia?</p>
       <div class="music-btns">
-        <button class="button" @click="playMusic">Ingresar con música</button>
-        <button class="button" @click="hideWelcome">Ingresar sin música</button>
+        <button class="button" @click="playMusic">Si!</button>
+        <button class="button" @click="hideWelcome">No</button>
       </div>
     </div>
   </section>
@@ -79,12 +79,13 @@ const playMusic = () => {
 
 .music-btns {
   display: flex;
-  gap: 5px;
+  gap: 25px;
   white-space: nowrap;
 }
 
 .music-btns button {
   font-size: 1rem;
+  padding: 10px 30px;
 }
 
 @media (min-width: 767px) {

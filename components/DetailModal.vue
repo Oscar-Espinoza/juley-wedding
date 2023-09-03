@@ -2,7 +2,7 @@
   <div class="container">
     <h3>{{ title }}</h3>
     <ul>
-      <li v-for="tip in tips">{{ tip }}</li>
+      <li v-for="tip in tips" v-html="tip"></li>
     </ul>
   </div>
 </template>
@@ -41,5 +41,6 @@ li {
   text-align: center;
   border-bottom: 1px solid rgb(206, 206, 206);
   padding: 10px 0;
+  font-size: 20px;
 }
 </style>

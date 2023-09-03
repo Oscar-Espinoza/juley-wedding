@@ -11,16 +11,33 @@ tu vestuario">
         </OpenModalButton>
       </Detail>
 
-      <Detail title="Tips y Notas" lottie="tips" text="Información adicional
-para tener en cuenta">
+      <Detail title="Tips y Notas" lottie="tips" text="Información adicional para tener en cuenta">
         <OpenModalButton btnText="Info +">
 
+        </OpenModalButton>
+      </Detail>
+
+      <Detail title="Sobre el regalo!" lottie="present" text="Información importante sobre el regalo de bodas">
+        <OpenModalButton btnText="Ver más">
+          <DetailModal title="Sobre el regalo" :tips="[
+            `
+              Nuestro amor es tan grande que podría llenar el océano pero nuestro presupuesto no lo es 😅 🤷🏽‍♀<br><br>
+              ¡Si desean regalarnos algo, que sea dinero!<br><br>
+              No prometemos gastarlo con sabiduría, pero prometemos pasar un buen rato intentándolo.<br><br>
+              Te damos ideas:<br><br>
+              •Efectivo (dólares, euros, libras esterlinas, reales, pesos arg)💵<br><br>
+              • Tranferencias a:<br>
+              Alias: alexavlskz<br>
+              Cbu: 143000173025719380010<br>
+              Alexandra Velásquez Brubank<br><br>
+              ¡Gracias por ser parte de nuestra aventura nupcial!💸👰👰🏽‍♀`]" />
         </OpenModalButton>
       </Detail>
     </div>
     <img src="/assets/curves.svg" alt="curves-svg" class="curves">
   </section>
 </template>
+
 
 <script>
 
