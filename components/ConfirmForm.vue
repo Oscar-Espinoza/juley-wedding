@@ -29,10 +29,23 @@ const handleRadioChange = (radio) => {
   willAssist.value = radio
 }
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-  console.log("Asistirá?", willAssist.value)
-  console.log("Quién?", name.value)
+import axios from 'axios';
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const url = 'https://script.google.com/macros/s/AKfycbwgvOotNYf7qDmRA0OiGu-jLgcB06prJVm0FsNiSwyuJwt38rEeEv-uYUjtwbTvd8BQ/exec';
+  const formData = {
+    willAssist: willAssist.value ? 'Si' : 'No',
+    name: name.value
+  };
+
+  try {
+    const response = await axios.post(url, formData);
+    console.log(response.data);
+  } catch (error) {
+    console.error("Error sending data:", error);
+  }
 }
 </script>
 

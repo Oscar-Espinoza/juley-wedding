@@ -13,13 +13,13 @@
           href="https://www.addevent.com/event/Rs18475642" target="_blank">Agendar</a>
       </Info>
 
-      <Info title="Lugar" text="Salon de fiestas Avril">
+      <Info title="Lugar" text="Estancia “La Guarida Lobos”">
         <OpenModalButton btnText="Confirmar Asistencia">
           <ConfirmForm />
         </OpenModalButton>
       </Info>
 
-      <Info title="Dirección" text="Av. Los Reartes 12 - BsAs">
+      <Info title="Dirección" text="Sobre ruta 41, Lobos. Prov. BsAs">
         <OpenModalButton btnText="¿Cómo llegar?">
           <Map />
         </OpenModalButton>
