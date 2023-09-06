@@ -15,7 +15,7 @@
 
       <Info title="Lugar" text="Estancia “La Guarida Lobos”">
         <OpenModalButton btnText="Confirmar Asistencia">
-          <ConfirmForm />
+          <ConfirmForm :handleSuccess="handleSuccess" :confirmed="confirmed" />
         </OpenModalButton>
       </Info>
 
@@ -30,7 +30,12 @@
 </template>
 
 <script setup>
+import { defineProps } from 'vue';
 
+const { handleSuccess, confirmed } = defineProps({
+  handleSuccess: { type: Function, required: true },
+  confirmed: { type: Boolean, required: true },
+})
 </script>
 
 <style scoped>

@@ -1,50 +1,66 @@
 <template>
-  <form @submit="handleSubmit">
+  <form class="container" @submit="handleSubmit" v-if="!confirmed">
     <h2 class="title">¿Asistes a la ceremonia?</h2>
     <div class="radio-wrap">
-      <input type="radio" id="assist-true" name="assist" :value="true" v-model="radioValue"
+      <input type="radio" id="assist-true" name="entry.877086558" value="Si, iré" v-model="willAssist"
         @change="() => handleRadioChange(true)">
       <label for="assist-true" :class="{ checked: willAssist }">
         <span></span>¡Sí, confirmo!
       </label>
 
-      <input type="radio" id="assist-false" name="assist" :value="false" v-model="radioValue"
+      <input type="radio" id="assist-false" name="entry.877086558" value="Lo siento, no podré ir" v-model="willAssist"
         @change="() => handleRadioChange(false)">
-      <label for="assist-false" :class="{ checked: !willAssist && willAssist !== null }">
+      <label for="assist-false" :class="{ checked: !willAssist && willAssist !== '' }">
         No puedo {{ ':(' }}
       </label>
     </div>
-    <input type="text" v-model="name" placeholder="Ingrese su nombre completo" class="name-input">
+    <input name="entry.1498135098" type="text" v-model="name" placeholder="Ingrese su nombre completo" class="name-input">
     <button type="submit" class="button">Enviar</button>
   </form>
+
+  <div v-if="confirmed" class="container">
+    <h2 class="title">Gracias por confirmar!</h2>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 
-const willAssist = ref(null)
+const { handleSuccess, confirmed } = defineProps({
+  handleSuccess: { type: Function, required: true },
+  confirmed: { type: Boolean, required: true },
+})
+
+const willAssist = ref(true)
 const name = ref('')
 
 const handleRadioChange = (radio) => {
   willAssist.value = radio
 }
 
-import axios from 'axios';
-
 const handleSubmit = async (e) => {
   e.preventDefault();
+  const action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdV3iDHslpNtbh0_pqQf3z2jJ2XbzDpka6EDecU_1kTZ15A1w/formResponse"
 
-  const url = 'https://script.google.com/macros/s/AKfycbwgvOotNYf7qDmRA0OiGu-jLgcB06prJVm0FsNiSwyuJwt38rEeEv-uYUjtwbTvd8BQ/exec';
-  const formData = {
-    willAssist: willAssist.value ? 'Si' : 'No',
-    name: name.value
-  };
+  const assistEntryId = "entry.877086558";
+  const nameEntryId = "entry.1498135098";
+
+  const formData = new FormData();
+  formData.append(assistEntryId, willAssist.value ? 'Si, iré' : 'Lo siento, no podré ir');
+  formData.append(nameEntryId, name.value);
 
   try {
-    const response = await axios.post(url, formData);
-    console.log(response.data);
+    const response = await fetch(action, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors',
+    });
+    handleSuccess()
+    console.log('Form data sent successfully');
+    willAssist.value = ''
+    name.value = ''
   } catch (error) {
-    console.error("Error sending data:", error);
+    console.error('There was an error sending the form data:', error);
   }
 }
 </script>
@@ -60,7 +76,7 @@ const handleSubmit = async (e) => {
   border-radius: 30px;
 }
 
-form {
+.container {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -109,7 +125,7 @@ label::after {
   width: 6px;
   height: 6px;
   left: 7px;
-  top: 7px;
+  top: 8px;
   border-radius: 50%;
   background: white;
 }

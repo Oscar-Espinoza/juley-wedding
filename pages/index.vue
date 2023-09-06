@@ -2,10 +2,10 @@
   <div>
     <Welcome :handlePlay="handlePlay" />
     <TopSection />
-    <InfoSection />
+    <InfoSection :handleSuccess="handleSuccess" :confirmed="confirmed" />
     <Carousel />
     <DetailsSection />
-    <Footer></Footer>
+    <Footer :handleSuccess="handleSuccess" :confirmed="confirmed"></Footer>
   </div>
   <div id="modal"></div>
   <div class="music" @click="handleMute">
@@ -17,9 +17,13 @@
 <script setup>
 import { ref } from 'vue'
 
-
 const muted = ref(true)
 const song = ref(null)
+const confirmed = ref(false)
+
+const handleSuccess = () => {
+  confirmed.value = true
+}
 
 const handleMute = () => {
   muted.value = !muted.value

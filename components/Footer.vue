@@ -6,12 +6,17 @@
     <p @click="openModal" class="confirm">Confirmar Asistencia</p>
   </footer>
   <Modal :closeModal="closeModal" :isModalOpen="isModalOpen">
-    <ConfirmForm />
+    <ConfirmForm :handleSuccess="handleSuccess" :confirmed="confirmed" />
   </Modal>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
+
+const { handleSuccess, confirmed } = defineProps({
+  handleSuccess: { type: Function, required: true },
+  confirmed: { type: Boolean, required: true }
+})
 
 const isModalOpen = ref(false)
 
