@@ -11,9 +11,10 @@ tu vestuario">
         </OpenModalButton>
       </Detail>
 
-      <Detail title="Tips y Notas" lottie="tips" text="Información adicional para tener en cuenta">
+      <Detail title="Tips" lottie="tips" text="Información adicional para tener en cuenta">
         <OpenModalButton btnText="Info +">
-
+          <DetailModal title="Tips"
+            :tips="['•Si recibiste esta invitación es porque te queremos demasiado 🫶🏽 Pero lamentablemente, no podemos duplicar la diversión. Válido para vos no más 🌟😄🎉', '•Desde la entrada hasta la estancia debes rodar 500 metros maso, no te asustes que entre tanto árbol se esconde una boda😅', '• La puntualidad es el mejor regalo que puedes traer. ¡Llega a tiempo para celebrar con nosotras!🕑', '• En una boda al aire libre, la comodidad comienza por los pies. ¡Opta por calzado cómodo o llévate tus chancletas sin pena 😌👡.', '• Por si la noche decide ser fresca, lleva tu abrigo y bailaremos juntos para entrar en calor 🧥💃🌙', '• La fiesta es hasta las 2 am, ¡diviértete al máximo! Si tomas, no manejes; si manejas, no tomes. Tu seguridad es lo primero.🎉🚗🍻', '• Si tú intención es quedarte en Lobos, Avísanos con tiempo y te sugerimos algunas opciones de hospedaje para que nadie se quede sin fiesta ni cama 🏨🎉']" />
         </OpenModalButton>
       </Detail>
 

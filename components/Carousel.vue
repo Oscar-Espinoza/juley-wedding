@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3 class="title">Retratos de Nuestro Amor</h3>
-    <p class="text">Un minuto, un segundo, un unstante que queda en la eternidad</p>
+    <p class="text">El amor siempre encuentra su camino</p>
 
 
     <Swiper :loop="true" :spaceBetween="10" :thumbs="{ swiper: thumbsSwiper }" :modules="[FreeMode, Navigation, Thumbs]"
