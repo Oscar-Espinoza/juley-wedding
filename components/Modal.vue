@@ -30,5 +30,6 @@ const { closeModal, isModalOpen } = defineProps({
   max-width: 475px;
   border-radius: 30px;
   max-height: 80vh;
+  overflow-y: auto;
 }
 </style>
