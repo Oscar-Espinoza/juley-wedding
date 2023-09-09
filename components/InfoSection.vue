@@ -23,6 +23,9 @@
         <OpenModalButton btnText="¿Cómo llegar?">
           <Map />
         </OpenModalButton>
+        <OpenModalButton btnText="Imágenes de la entrada">
+          <Entrance />
+        </OpenModalButton>
       </Info>
     </div>
     <img src="/assets/curves.svg" alt="curves-foot" class="curves">

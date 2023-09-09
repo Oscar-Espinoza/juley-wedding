@@ -29,7 +29,7 @@ const { closeModal, isModalOpen } = defineProps({
   width: 90%;
   max-width: 475px;
   border-radius: 30px;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
 }
 </style>
